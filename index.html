@@ -4,59 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Permanent+Marker&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!--  -->
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
 
     <script src="js/scripts.js" defer></script>
     <title>Currency Converter</title>
 </head>
 <body>
-    <header>
-        <h1 class="title">Currency Converter</h1>
-        <div class="subtitleCurrency">
-            <p class="subtitle">From Brazilian Real to:</p>
-            <div>
-                <p class="currecy">Dollar</p>
-                <p class="currecy">Euro</p>
-                <p class="currecy">Pound Sterling</p>
-                <p class="currecy">Yuan Renminbi</p>
+    <div class="container">
+        <header>
+            <h1 class="title">Currency Converter</h1>
+            <div class="subtitleCurrency">
+                <p class="subtitle">From Brazilian Real to:</p>
+                <div>
+                    <p class="currency">Dollar</p>
+                    <p class="currency">Euro</p>
+                    <p class="currency">Pound Sterling</p>
+                    <p class="currency">Yuan Renminbi</p>
+                </div>
             </div>
-        </div>
-        <p><a class="source" href="https://exchangerate.host/#/">Source: api.exchangerate.host</a></p>
-    </header>
-
-    <main>
-        <section class="section-1">
-            <label for="">Value to convert:</label>
-            <div class="wrapReal">
-                <img class="flag" src="assets/flag-brazil.png" alt="">
-                <input type="number" id="brazilianReal" placeholder="Enter the value here!">
-            </div>
-            <button class="btnConvert">Convert</button>
-        </section>
-
-        <section class="section-2">
-            <div>
-                <img class="flag" src="assets/flag-usa.png" alt="">
-                <div class="resultDollar"></div>
-            </div>
-            <div>
-                <img class="flag" src="assets/flag-euro.png" alt="">
-                <div class="resultEuro"></div>
-            </div>
-            <div>
-                <img class="flag" src="assets/flag-ukgb.jpeg" alt="">
-                <div class="resultPound"></div>
-            </div>
-            <div>
-                <img class="flag" src="assets/flag-china.png" alt="">
-                <div class="resultYuan"></div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p class="footerNameJob">Developed by <a href="https://rma-contacts.vercel.app/">Renato Albuquerque</a></p>
-        <p class="footerNameJob">Front-End Developer</p>
-    </footer>
+            <p><a class="source" href="https://exchangerate.host/#/">Source: api.exchangerate.host</a></p>
+        </header>
+        <main>
+            <section class="section-1">
+                <p class="label">Value to convert:</p>
+                <div class="wrapReal">
+                    <img class="flag" src="assets/flag-brazil.png" alt="">
+                    <input type="number" id="brazilianReal" placeholder="Enter the value here!">
+                </div>
+                <button class="btnConvert">Convert</button>
+            </section>
+            <section class="section-2">
+                <div>
+                    <img class="flag" src="assets/flag-usa.png" alt="">
+                    <div class="resultDollar"></div>
+                </div>
+                <div>
+                    <img class="flag" src="assets/flag-euro.png" alt="">
+                    <div class="resultEuro"></div>
+                </div>
+                <div>
+                    <img class="flag" src="assets/flag-ukgb.jpeg" alt="">
+                    <div class="resultPound"></div>
+                </div>
+                <div>
+                    <img class="flag" src="assets/flag-china.png" alt="">
+                    <div class="resultYuan"></div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footerNameJob">Developed by <a href="https://rma-contacts.vercel.app/">Renato Albuquerque</a></p>
+            <p class="footerNameJob">Front-End Developer</p>
+        </footer>
+    </div>
 </body>
 </html>

@@ -13,6 +13,18 @@
 
 body {
     font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Permanent Marker', cursive;
 }
 
 .subtitleCurrency {
@@ -21,12 +33,22 @@ body {
     gap: 2rem;
 }
 
+.currency {
+    font-family: 'Kaushan Script', cursive;
+}
+
 .wrapReal {
     display: flex;
     align-items: center;
     gap: 2rem;
 }
 
-.flagBrazil {
+.label {
+    text-align: center;
+}
 
+.flag {
+    width: 5rem;
+    height: 4rem;
+    border-radius: 1rem;
 }
