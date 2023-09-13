@@ -16,11 +16,12 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.container {
+.container { /* Strategy to center all the page. */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .title {
@@ -33,22 +34,53 @@ body {
     gap: 2rem;
 }
 
-.currency {
+.subtitle span, .currency {
     font-family: 'Kaushan Script', cursive;
 }
 
-.wrapReal {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+.section-1 {
+    border: 1px solid darkblue;
+    border-radius: 1rem;
+    padding: 1rem;
 }
 
 .label {
     text-align: center;
 }
 
+.wrapReal {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .flag {
-    width: 5rem;
-    height: 4rem;
+    width: 4rem;
+    height: 3rem;
     border-radius: 1rem;
+}
+
+#brazilianReal {
+    background-color: antiquewhite;
+    padding: 0.65rem 1rem;
+    border-radius: 1rem;
+}
+
+input::placeholder {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btnConvert {
+    display: block;
+    margin: 0 auto;
+    background-color: antiquewhite;
+    padding: 0.65rem 2rem;
+    border-radius: 1rem;
+}
+
+.section-2 {
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 1rem;
 }
