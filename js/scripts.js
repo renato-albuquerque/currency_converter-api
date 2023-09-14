@@ -13,8 +13,8 @@ let resultPeso = document.querySelector(".resultPeso")
 
 btnConvert.addEventListener("click", allCurrency)
 
-// functions
 
+// functions
 
 async function currencyConverterDollar() {
     let dollarURL = `https://api.exchangerate.host/convert?from=BRL&to=USD&amount=${inputBrazilianReal.value}`;
@@ -23,7 +23,7 @@ async function currencyConverterDollar() {
     let data = await response.json();
     console.log(data);
 
-    resultDollar.textContent = data.result.toFixed(2);
+    resultDollar.textContent = data.result.toLocaleString('pt-BR', { style: 'currency', currency: 'USD' });
 }
 
 async function currencyConverterEuro() {
@@ -33,7 +33,7 @@ async function currencyConverterEuro() {
     let data = await response.json();
     console.log(data);
 
-    resultEuro.textContent = data.result.toFixed(2);
+    resultEuro.textContent = data.result.toLocaleString('pt-BR', { style: 'currency', currency: 'EUR' });
 }
 
 async function currencyConverterPound() {
@@ -43,7 +43,7 @@ async function currencyConverterPound() {
     let data = await response.json();
     console.log(data);
     
-    resultPound.textContent = data.result.toFixed(2);
+    resultPound.textContent = data.result.toLocaleString('pt-BR', { style: 'currency', currency: 'GBP' });
 }
 
 async function currencyConverterYuan() {
@@ -53,7 +53,7 @@ async function currencyConverterYuan() {
     let data = await response.json();
     console.log(data);
     
-    resultYuan.textContent = data.result.toFixed(2);
+    resultYuan.textContent = data.result.toLocaleString('pt-BR', { style: 'currency', currency: 'CNY' });
 }
 
 async function currencyConverterPeso() {
@@ -63,7 +63,7 @@ async function currencyConverterPeso() {
     let data = await response.json();
     console.log(data);
     
-    resultPeso.textContent = data.result.toFixed(2);
+    resultPeso.textContent = data.result.toLocaleString('pt-BR', { style: 'currency', currency: 'ARS' });
 }
 
 function allCurrency() {
