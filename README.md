@@ -25,7 +25,6 @@ Users should be able to:
 
 ### Screenshot
 
-#### Responsive Viewer
 ![screenshot](assets/screencapture-currency-converter-api.png)
 
 ### Links
