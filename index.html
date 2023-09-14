@@ -19,16 +19,17 @@
     <div class="container">
         <header class="header">
             <h1 class="title">Currency Converter</h1>
+            <p class="source-p">Source: <a class="source-a" href="https://exchangerate.host/#/">api.exchangerate.host</a></p>
             <div class="subtitleCurrency">
-                <p class="subtitle">From <span>Brazilian Real</span> to:</p>
+                <p class="subtitle">From <span>&nbsp;Brazilian Real&nbsp;</span> to:</p>
                 <div>
                     <p class="currency">Dollar</p>
                     <p class="currency">Euro</p>
                     <p class="currency">Pound Sterling</p>
                     <p class="currency">Yuan Renminbi</p>
+                    <p class="currency">Argentinian Peso</p>
                 </div>
             </div>
-            <p class="source-p">Source: <a class="source-a" href="https://exchangerate.host/#/">api.exchangerate.host</a></p>
         </header>
         <main>
             <section class="section-1">
@@ -44,21 +45,26 @@
                 <div class="wrapAllFlagsResults">
                     <div class="wrapFlagResult">
                         <img class="flag" src="assets/flag-usa.png" alt="">
-                        <div class="result resultDollar">23,00 <span>dollar</span></div>
+                        <div class="result resultDollar"></div>
                     </div>
                     <div class="wrapFlagResult">
                         <img class="flag" src="assets/flag-euro.png" alt="">
-                        <div class="result resultEuro">23,00 <span>euro</span></div>
+                        <div class="result resultEuro"></div>
                     </div>
                     <div class="wrapFlagResult">
                         <img class="flag" src="assets/flag-ukgb.jpeg" alt="">
-                        <div class="result resultPound">23,00 <span>pound sterling</span></div>
+                        <div class="result resultPound"></div>
                     </div>
                     <div class="wrapFlagResult">
                         <img class="flag" src="assets/flag-china.png" alt="">
-                        <div class="result resultYuan">23,00 <span>yuan renminbi</span></div>
+                        <div class="result resultYuan"></div>
+                    </div>
+                    <div class="wrapFlagResult">
+                        <img class="flag" src="assets/flag-argentina.png" alt="">
+                        <div class="result resultPeso"></div>
                     </div>
                 </div>
+                <button class="btnReset" onclick="location.reload()">Reset</button>
             </section>
         </main>
         <footer class="footer">
