@@ -1,6 +1,6 @@
 # Currency Converter App | api.exchangerate.host
 
-App that provides an easy way to convert currencies, from the Brazilian Real to: US Dollar, Euro, Pound Sterling, Yuan Renminbi, Argentinian Peso. The exchangerate.host API was used.
+App that provides an easy way to convert currencies, from the Brazilian Real to: US Dollar, Euro, Pound Sterling, Yuan Renminbi, Argentinian Peso. The [exchangerate.host API](https://exchangerate.host/#/) was used.
  
 "Mobile First" project developed with HTML, CSS and JavaScript.
 
