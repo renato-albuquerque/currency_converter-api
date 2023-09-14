@@ -26,12 +26,18 @@ body {
 
 .title {
     font-family: 'Permanent Marker', cursive;
+    margin-bottom: 2rem;
+}
+
+.header {
+    margin-bottom: 2rem;
 }
 
 .subtitleCurrency {
     display: flex;
     align-items: center;
     gap: 2rem;
+    margin-bottom: 1rem;
 }
 
 .subtitle span, .currency {
@@ -46,17 +52,20 @@ body {
     border: 1px solid darkblue;
     border-radius: 1rem;
     padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 .label {
     text-align: center;
     font-family: 'Kaushan Script', cursive;
+    margin-bottom: 1rem;
 }
 
 .wrapReal {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .flag {
@@ -88,11 +97,13 @@ input::placeholder {
     border: 1px solid black;
     border-radius: 1rem;
     padding: 1rem;
+    margin-bottom: 2rem;
 }
 
 .section-2 p {
     text-align: center;
     font-family: 'Kaushan Script', cursive;
+    margin-bottom: 1rem;
 }
 
 .wrapAllFlagsResults {
@@ -109,11 +120,18 @@ input::placeholder {
 
 .result {
     background-color: antiquewhite;
-    padding: 0.65rem 1rem;
+    padding: 0.65rem 1.5rem;
     border-radius: 1rem;
     flex: 1;
     height: 3rem;
     text-align: left;
     font-family: 'Poppins', sans-serif;
     font-size: 1.3rem;
+    position: relative;
+}
+
+.result span {
+    position: absolute;
+    right: 1.5rem;
+    font-style: italic;
 }
