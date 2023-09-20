@@ -8,9 +8,16 @@ let resultEuro = document.querySelector(".resultEuro")
 let resultPound = document.querySelector(".resultPound")
 let resultYuan = document.querySelector(".resultYuan")
 let resultPeso = document.querySelector(".resultPeso")
+let rateDollar = document.querySelector(".rateDollar")
+let rateEuro = document.querySelector(".rateEuro")
+let ratePound = document.querySelector(".ratePound")
+let rateYuan = document.querySelector(".rateYuan")
+let ratePeso = document.querySelector(".ratePeso")
 
+// to show tha current date in the app
 let todayDate = new Date();
-date.textContent = `${todayDate.getDate()}/${todayDate.getMonth()}/${todayDate.getFullYear()}`;
+date.textContent = `${todayDate.getDate()}/${todayDate.getMonth()+1}/${todayDate.getFullYear()}`;
+
 
 // events
 
@@ -27,6 +34,7 @@ async function currencyConverterDollar() {
     console.log(data);
 
     resultDollar.textContent = data.result.toLocaleString('pt-BR', { style: 'currency', currency: 'USD' });
+    rateDollar.textContent = data.info.rate.toFixed(2);
 }
 
 async function currencyConverterEuro() {
@@ -37,6 +45,7 @@ async function currencyConverterEuro() {
     console.log(data);
 
     resultEuro.textContent = data.result.toLocaleString('pt-BR', { style: 'currency', currency: 'EUR' });
+    rateEuro.textContent = data.info.rate.toFixed(2);
 }
 
 async function currencyConverterPound() {
@@ -47,6 +56,7 @@ async function currencyConverterPound() {
     console.log(data);
     
     resultPound.textContent = data.result.toLocaleString('pt-BR', { style: 'currency', currency: 'GBP' });
+    ratePound.textContent = data.info.rate.toFixed(2);
 }
 
 async function currencyConverterYuan() {
@@ -57,6 +67,7 @@ async function currencyConverterYuan() {
     console.log(data);
     
     resultYuan.textContent = data.result.toLocaleString('pt-BR', { style: 'currency', currency: 'CNY' });
+    rateYuan.textContent = data.info.rate.toFixed(2);
 }
 
 async function currencyConverterPeso() {
@@ -67,6 +78,7 @@ async function currencyConverterPeso() {
     console.log(data);
     
     resultPeso.textContent = data.result.toLocaleString('pt-BR', { style: 'currency', currency: 'ARS' });
+    ratePeso.textContent = data.info.rate.toFixed(2);
 }
 
 function allCurrency() {
@@ -77,7 +89,4 @@ function allCurrency() {
     currencyConverterPeso();
 }
 
-/* function resetDate() {
-    date.classList.add("hide");
-    date.textContent = "dd/mm/yyy";
-} */
+
