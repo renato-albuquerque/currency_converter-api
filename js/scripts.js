@@ -1,5 +1,6 @@
 // variables
 
+let date = document.querySelector(".date span")
 let inputBrazilianReal = document.querySelector("#brazilianReal")
 let btnConvert = document.querySelector(".btnConvert")
 let resultDollar = document.querySelector(".resultDollar")
@@ -8,6 +9,8 @@ let resultPound = document.querySelector(".resultPound")
 let resultYuan = document.querySelector(".resultYuan")
 let resultPeso = document.querySelector(".resultPeso")
 
+let todayDate = new Date();
+date.textContent = `${todayDate.getDate()}/${todayDate.getMonth()}/${todayDate.getFullYear()}`;
 
 // events
 
@@ -73,3 +76,8 @@ function allCurrency() {
     currencyConverterYuan();
     currencyConverterPeso();
 }
+
+/* function resetDate() {
+    date.classList.add("hide");
+    date.textContent = "dd/mm/yyy";
+} */
