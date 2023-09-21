@@ -26,6 +26,8 @@ btnConvert.addEventListener("click", allCurrency)
 
 // functions
 
+// result functions
+
 async function currencyConverterDollar() {
     let dollarURL = `https://api.exchangerate.host/convert?from=BRL&to=USD&amount=${inputBrazilianReal.value}`;
     let response = await fetch(dollarURL);
@@ -34,7 +36,8 @@ async function currencyConverterDollar() {
     console.log(data);
 
     resultDollar.textContent = data.result.toLocaleString('pt-BR', { style: 'currency', currency: 'USD' });
-    rateDollar.textContent = data.info.rate.toFixed(2);
+
+    showRateUsdBrl()
 }
 
 async function currencyConverterEuro() {
@@ -45,7 +48,8 @@ async function currencyConverterEuro() {
     console.log(data);
 
     resultEuro.textContent = data.result.toLocaleString('pt-BR', { style: 'currency', currency: 'EUR' });
-    rateEuro.textContent = data.info.rate.toFixed(2);
+    
+    showRateEurBrl()
 }
 
 async function currencyConverterPound() {
@@ -56,7 +60,8 @@ async function currencyConverterPound() {
     console.log(data);
     
     resultPound.textContent = data.result.toLocaleString('pt-BR', { style: 'currency', currency: 'GBP' });
-    ratePound.textContent = data.info.rate.toFixed(2);
+    
+    showRatePouBrl()
 }
 
 async function currencyConverterYuan() {
@@ -67,7 +72,8 @@ async function currencyConverterYuan() {
     console.log(data);
     
     resultYuan.textContent = data.result.toLocaleString('pt-BR', { style: 'currency', currency: 'CNY' });
-    rateYuan.textContent = data.info.rate.toFixed(2);
+    
+    showRateYuaBrl()
 }
 
 async function currencyConverterPeso() {
@@ -78,7 +84,8 @@ async function currencyConverterPeso() {
     console.log(data);
     
     resultPeso.textContent = data.result.toLocaleString('pt-BR', { style: 'currency', currency: 'ARS' });
-    ratePeso.textContent = data.info.rate.toFixed(2);
+    
+    showRatePesBrl()
 }
 
 function allCurrency() {
@@ -89,4 +96,58 @@ function allCurrency() {
     currencyConverterPeso();
 }
 
+// rate functions
+
+async function showRateUsdBrl() {
+    let dollarURL = `https://api.exchangerate.host/convert?from=USD&to=BRL&amount=${inputBrazilianReal.value}`;
+    let response = await fetch(dollarURL);
+    console.log(response);
+    let data = await response.json();
+    console.log(data);
+
+    rateDollar.textContent = data.info.rate.toFixed(2);
+}
+
+async function showRateEurBrl() {
+    let euroURL = `https://api.exchangerate.host/convert?from=EUR&to=BRL&amount=${inputBrazilianReal.value}`;
+    let response = await fetch(euroURL);
+    console.log(response);
+    let data = await response.json();
+    console.log(data);
+
+    rateEuro.textContent = data.info.rate.toFixed(2);
+}
+
+async function showRatePouBrl() {
+    let poundURL = `https://api.exchangerate.host/convert?from=GBP&to=BRL&amount=${inputBrazilianReal.value}`;
+    let response = await fetch(poundURL);
+    console.log(response);
+    let data = await response.json();
+    console.log(data);
+    
+    resultPound.textContent = data.result.toLocaleString('pt-BR', { style: 'currency', currency: 'GBP' });
+    ratePound.textContent = data.info.rate.toFixed(2);
+}
+
+async function showRateYuaBrl() {
+    let yuanURL = `https://api.exchangerate.host/convert?from=CNY&to=BRL&amount=${inputBrazilianReal.value}`;
+    let response = await fetch(yuanURL);
+    console.log(response);
+    let data = await response.json();
+    console.log(data);
+    
+    resultYuan.textContent = data.result.toLocaleString('pt-BR', { style: 'currency', currency: 'CNY' });
+    rateYuan.textContent = data.info.rate.toFixed(2);
+}
+
+async function showRatePesBrl() {
+    let pesoURL = `https://api.exchangerate.host/convert?from=ARS&to=BRL&amount=${inputBrazilianReal.value}`;
+    let response = await fetch(pesoURL);
+    console.log(response);
+    let data = await response.json();
+    console.log(data);
+    
+    resultPeso.textContent = data.result.toLocaleString('pt-BR', { style: 'currency', currency: 'ARS' });
+    ratePeso.textContent = data.info.rate.toFixed(2);
+}
 
